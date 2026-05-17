@@ -140,6 +140,14 @@ Ejemplo:
 https://raw.githubusercontent.com/USUARIO/REPOSITORIO/main/data/estudiantes.csv
 ```
 
+URLs (RAW):
+https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/estudiantes.csv
+https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/materias.csv
+https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/profesores.csv
+https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/inscripciones.csv
+https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/amistades.csv
+https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/imparte.csv
+
 ---
 
 # Parte 6 — Crear restricciones
