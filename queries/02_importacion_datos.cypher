@@ -18,7 +18,9 @@ LOAD CSV WITH HEADERS FROM
 AS row
 
 CREATE (:Materias {
-    //imports
+    id: row.id,
+    nombre: row.nombre,
+    area: row.area
 });
 
 // 3. Importar Profesores
@@ -27,7 +29,9 @@ LOAD CSV WITH HEADERS FROM
 AS row
 
 CREATE (:Profesores{
-    //imports
+    id: row.id,
+    nombre: row.nombre,
+    departamento: row.departamento
 });
 
 // Crear Relaciones de Inscripción (Paso 11)

@@ -374,10 +374,19 @@ Incluir:
 Responder:
 
 1. ¿Qué ventajas tienen las bases de datos de grafos?
+Las ventajas son que es mas rapido para consltar relaciones, no nesecitas hacer JOIN como en SQL, es mas facil encontrar conexiones entre los datos, y se puede ver el grafo de forma visual. Es bueno para redes sociales, recomendaciones y detección de fraudes.
+
 2. ¿Qué diferencia existe entre relaciones en grafos y llaves foráneas?
+En grafos las relaciones son directas y se pueden recorrer facilmente en ambas direciones, son como un puntero fisico. En cambio las llaves foraneas en SQL son solo valores que coinciden y para hacer busquedas profundas necesitas muchos JOIN que son lentos y complicados.
+
 3. ¿Qué ventajas observó al utilizar Cypher?
+Cypher es mas facil de aprender que SQL porque es mas legible, usas flechas para las relaciones y no tenes que aprenderte un monton de reglas. Es mas rapido para hacer consultas con muchas relaciones porque no nesecitas hacer JOIN. Tambien puedes ver los resultados como grafo y no solo como tablas, eso ayuda a entender mejor los datos.
+
 4. ¿Qué consultas fueron más fáciles de representar en Neo4j?
+Las consultas de amistad como "amigos de mis amigos" fueron muy faciles, solo se usó el asterisco *1..2 y funcionó. Tambien las que conectan muchas tablas como estudiantes con materias y profesores, en SQL seria muchos JOIN pero en Neo4j es solo seguir las relaciones con flechas.
+
 5. ¿Qué dificultades encontró?
+Al principio fue dificil entender que no se usan JOIN y pensar en grafos. Tambien tuve problemas con la importacion de CSV porque las URLs RAW aveces no funcionaban y habia que escribir bien las rutas. 
 
 ---
 
