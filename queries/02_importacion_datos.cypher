@@ -17,7 +17,7 @@ LOAD CSV WITH HEADERS FROM
 'https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/materias.csv'
 AS row
 
-CREATE (:Materias {
+CREATE (:Materia {
     id: row.id,
     nombre: row.nombre,
     area: row.area
@@ -28,7 +28,7 @@ LOAD CSV WITH HEADERS FROM
 'https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/profesores.csv'
 AS row
 
-CREATE (:Profesores{
+CREATE (:Profesor {
     id: row.id,
     nombre: row.nombre,
     departamento: row.departamento
