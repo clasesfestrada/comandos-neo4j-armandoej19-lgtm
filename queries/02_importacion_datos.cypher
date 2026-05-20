@@ -34,29 +34,29 @@ CREATE (:Profesor {
     departamento: row.departamento
 });
 
-// Crear Relaciones de Inscripción (Paso 11)
+// Crear Relaciones de Inscripción
 LOAD CSV WITH HEADERS FROM
 'https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/inscripciones.csv'
 AS row
-MATCH (e:Estudiante {id: row.id_estudiante})
-MATCH (m:Materia {id: row.id_materia})
+MATCH (e:Estudiante {id: trim(row.estudiante_id)})
+MATCH (m:Materia {id: trim(row.materia_id)})
 CREATE (e)-[:INSCRITO_EN {
   calificacion: toFloat(row.calificacion),
   periodo: row.periodo
 }]->(m);
 
-// Crear Relaciones de Amistades (Paso 12)
+// Crear Relaciones de Amistades
 LOAD CSV WITH HEADERS FROM
 'https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/amistades.csv'
 AS row
-MATCH (e1:Estudiante {id: row.id_estudiante1})
-MATCH (e2:Estudiante {id: row.id_estudiante2})
+MATCH (e1:Estudiante {id: trim(row.estudiante_origen)})
+MATCH (e2:Estudiante {id: trim(row.estudiante_destino)})
 CREATE (e1)-[:AMIGO_DE {desde: row.desde, nivel: row.nivel}]->(e2);
 
-// Crear Relaciones de Imparticion (Paso 13)
+// Crear Relaciones de Impartición
 LOAD CSV WITH HEADERS FROM
 'https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-armandoej19-lgtm/main/data/imparticiones.csv'
 AS row
-MATCH (p:Profesor {id: row.id_profesor})
-MATCH (m:Materia {id: row.id_materia})
+MATCH (p:Profesor {id: trim(row.profesor_id)})
+MATCH (m:Materia {id: trim(row.materia_id)})
 CREATE (p)-[:IMPARTE {anio: row.anio, semestre: row.semestre}]->(m);
